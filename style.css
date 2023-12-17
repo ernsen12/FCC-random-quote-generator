@@ -1,0 +1,108 @@
+:root{
+    --primary: navy;
+    --base: rgba(255, 255, 255, 1);
+
+    --font-large:  clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
+    --font-small:  clamp(0.75rem, 0.4859rem + 1.1268vw, 1.5rem);
+    --font-vs: clamp(0.6rem, 0.4592rem + 0.6009vw, 1rem);
+}
+
+*,
+*::before,
+::after{
+    box-sizing: border-box;
+}
+
+.flip{
+    transform: rotateY(360deg);
+    transition: transform 1s;
+}
+
+html{
+    margin: 0;
+    font-family: 'Preahvihear', sans-serif;
+    font-size: 16px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    background-color: var(--primary);
+}
+
+#quote-box{
+    background-color: var(--base);
+    max-width: max(80%, 100px);
+    border: 1px solid black;
+    padding: 1.3em 1.5em;
+    border-radius: 5px;
+}
+
+#text{
+    text-align: center;
+    font-size: var(--font-large);
+    letter-spacing: .05rem;
+    color: var(--primary);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+#author{
+    text-align: right;
+    font-size: var(--font-small);
+    color: var(--primary);
+}
+
+.fa{
+    color: var(--primary);
+}
+
+#btns{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+
+#btns .fa{
+    padding: .5em;
+    background-color: var(--primary);
+    color: white;
+}
+
+.fa-tumblr{
+    margin-right: .4em;
+}
+
+#new-quote{
+    display: block;
+    margin-left: auto;
+    color: var(--base);
+    background-color: var(--primary);
+    font-size: var(--font-vs);
+    border: none;
+    border-radius: 2px;
+    padding: .6em 1.2em;
+}
+
+footer{
+    color: rgba(255, 255, 255, .8);
+    margin-top: 1em;
+    font-size: var(--font-vs);
+}
+
+@media (min-width: 40em){
+    #quote-box{
+        max-width: 50%;
+        padding: 2em 2.5em;
+    }
+
+    #btns{
+        margin-top: 2.5em;
+    }
+}
